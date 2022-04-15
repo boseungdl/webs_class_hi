@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>마우스 이펙트</title>
+
+    <link rel="stylesheet" href="../assets/css/cssnexon.css">
+    <link rel="stylesheet" href="../assets/css/custom.css">
+    <link rel="stylesheet" href="../assets/css/cssitom.css">
+    <style>
+        body::before {
+
+        }
+        #mouseType01 {}
+        
+        .mouse__wrap {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            color: #fff;
+            width: 100%;
+            height: 100vh;
+            overflow: hidden;
+            cursor: none;
+        }
+        .mouse__wrap p {
+            font-size: 2.5vw;
+            line-height: 2;
+            font-weight: 300;
+        }
+        .mouse__wrap p:last-child {
+            font-size: 3vw;
+            font-weight: 400;
+        }
+        .mouse__wrap p span {
+            border-bottom: 0.15vw dashed #fff;
+        }
+        .cursor {
+            position: absolute;
+            left:-100px; top: -100px;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            border: 3px solid #fff;
+            background-color: rgba(255,255,255,0.1);
+            user-select: none;
+            pointer-events: none;
+            transition:
+                background-color .2s,
+                border-radius .2s,
+                order-color .2s,
+                transform .6s;
+        }
+        .cursor.style1 {
+            background-color: rgba(255,165,0,0.4);
+            border-color: orange;
+        }
+        .cursor.style2 {
+            background-color: rgba(140,0,255,0.4);
+            border-color: rgb(140, 0, 255);
+            transform: rotate(720deg) scale(2);
+        }
+        .cursor.style3 {
+            background-color: rgb(0, 47, 255, 0.4);
+            border-color: rgb(0, 47, 255);
+            transform: scale(1.5) rotate(45deg);
+            border-radius: 10px;
+        }
+        .cursor.style4 {
+            background-color: rgb(121, 235, 197, 0.4);
+            border-color: rgb(121, 235, 197);
+            transform: scale(10) rotateY(360deg);
+        }
+        .cursor.style5 {
+            background-color: rgb(255, 0, 85, 0.4);
+            border-color: rgb(255, 0, 85);
+            transform: rotateY(720deg) scale(0.1);
+        }
+        .cursor.style6 {
+            background-color: rgb(255, 0, 85, 0.4);
+            border-color: rgb(255, 0, 85);
+            transform: scale(0.1);
+        }
+    </style>
+</head>
+<body class="img01">
+    <!-- main -->
+    <main>
+        <section id="mouseType01">
+            <div class="cursor">
+                
+            </div>
+
+            <div class="mouse__wrap">
+                <p>I  <span class="style1">hope</span> today will be <span class="style2">different</span> from <span class="style3">tomorrow</span>.</p>
+                <p>오늘은 <span class="style4">내일</span>과 <span class="style5">다른</span> 내가 되어있으면 <span class="style6">좋겠다</span>.</p>
+            </div>
+        </section>
+    </main>
+    <!-- //main -->
+
+
+    <!-- info -->
+    <div class="info">
+        <div class="title">
+            <h1><a href="sliderEffect.html">Javascript mouse Effect01</a></h1>
+            <p>마우스 이펙트 - 따라다니기</p>
+        </div>
+        
+        <div class="number">
+            <ul>
+                <li class="active"><a href="mouseEffect01.html">1</a></li>
+                <li><a href="mouseEffect02.html">2</a></li>
+                <li><a href="mouseEffect03.html">3</a></li>
+                <li><a href="mouseEffect04.html">4</a></li>
+                <li><a href="mouseEffect05.html">5</a></li>
+                <li><a href="mouseEffect06.html">6</a></li>
+                <li><a href="mouseEffect07.html">7</a></li>
+                <li><a href="mouseEffect08.html">8</a></li>
+            </ul>
+        </div>
+        
+        <div class="source">
+            <button class="source-btn">소스보기</button>
+            <div id="modal">
+                <div class="modal-wrap">
+                    <div class="modal-cont">
+                        <div class="code-view">
+                            <div class="view-header" aria-hidden="true">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </div>
+                            <div class="view-title">
+                                <ul>
+                                    <li class="active"><a href="#">HTML</a></li>
+                                    <li><a href="#">CSS</a></li>
+                                    <li><a href="#">JavaScript</a></li>
+                                </ul>
+                            </div>
+                            <div class="view-cont">
+                                <div>
+<pre><code class="language-html">&lt;main&gt;
+    &lt;section id="mouseType01"&gt;
+        &lt;div class="cursor"&gt;
+            
+        &lt;/div&gt;
+
+        &lt;div class="mouse__wrap"&gt;
+            &lt;p&gt;I  &lt;span class="style1"&gt;hope&lt;/span&gt; today will be &lt;span class="style2"&gt;different&lt;/span&gt; from &lt;span class="style3"&gt;tomorrow&lt;/span&gt;.&lt;/p&gt;
+            &lt;p&gt;오늘은 &lt;span class="style4"&gt;내일&lt;/span&gt;과 &lt;span class="style5"&gt;다른&lt;/span&gt; 내가 되어있으면 &lt;span class="style6"&gt;좋겠다&lt;/span&gt;.&lt;/p&gt;
+        &lt;/div&gt;
+    &lt;/section&gt;
+&lt;/main&gt;
+</code></pre>
+                                </div>
+                                <div>
+<pre><code class="language-css">.mouse__wrap {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: #fff;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    cursor: none;
+}
+.mouse__wrap p {
+    font-size: 2.5vw;
+    line-height: 2;
+    font-weight: 300;
+}
+.mouse__wrap p:last-child {
+    font-size: 3vw;
+    font-weight: 400;
+}
+.mouse__wrap p span {
+    border-bottom: 0.15vw dashed #fff;
+}
+.cursor {
+    position: absolute;
+    left:-100px; top: -100px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 3px solid #fff;
+    background-color: rgba(255,255,255,0.1);
+    user-select: none;
+    pointer-events: none;
+    transition:
+        background-color .2s,
+        border-radius .2s,
+        order-color .2s,
+        transform .6s;
+}
+.cursor.style1 {
+    background-color: rgba(255,165,0,0.4);
+    border-color: orange;
+}
+.cursor.style2 {
+    background-color: rgba(140,0,255,0.4);
+    border-color: rgb(140, 0, 255);
+    transform: rotate(720deg) scale(2);
+}
+.cursor.style3 {
+    background-color: rgb(0, 47, 255, 0.4);
+    border-color: rgb(0, 47, 255);
+    transform: scale(1.5) rotate(45deg);
+    border-radius: 10px;
+}
+.cursor.style4 {
+    background-color: rgb(121, 235, 197, 0.4);
+    border-color: rgb(121, 235, 197);
+    transform: scale(10) rotateY(360deg);
+}
+.cursor.style5 {
+    background-color: rgb(255, 0, 85, 0.4);
+    border-color: rgb(255, 0, 85);
+    transform: rotateY(720deg) scale(0.1);
+}
+.cursor.style6 {
+    background-color: rgb(255, 0, 85, 0.4);
+    border-color: rgb(255, 0, 85);
+    transform: scale(0.1);
+}
+</code></pre>                                                   
+                                </div>
+                                <div>
+<pre><code class="language-javascript"> window.addEventListener("mousemove", (event) => {
+    document.querySelector(".clientX").innerText = event.clientX;
+    document.querySelector(".clientY").innerText = event.clientY;
+    document.querySelector(".offsetX").innerText = event.offsetX;
+    document.querySelector(".offsetY").innerText = event.offsetY;
+    document.querySelector(".pageX").innerText = event.pageX;
+    document.querySelector(".pageY").innerText = event.pageY;
+    document.querySelector(".screenX").innerText = event.screenX;
+    document.querySelector(".screenY").innerText = event.screenY;
+})
+
+    window.addEventListener("mousemove", (e) => {
+    
+
+        let x =  e.clientX -25 + "px";
+        let y =  e.clientY -25 + "px";
+        document.querySelector(".cursor").style.cssText = "left:" + x + "; top:" + y
+    });
+
+        document.querySelectorAll(".mouse__wrap span").forEach(span => {
+        let attr = span.getAttribute("class");
+        span.addEventListener("mouseover", () => {
+            document.querySelector(".cursor").classList.add(attr);
+        });
+        span.addEventListener("mouseout", () => {
+            document.querySelector(".cursor").classList.remove(attr);
+        })
+    })
+
+
+</code></pre>  
+                                </div>                               
+                            </div>
+                        </div>
+                    </div>
+                    <button class="modal-close">닫기</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="attr">
+            <ul>
+                <li>clientX : <span class="clientX">0</span>px</li>
+                <li>clientY : <span class="clientY">0</span>px</li>
+                <li>offsetX : <span class="offsetX">0</span>px</li>
+                <li>offsetY : <span class="offsetY">0</span>px</li>
+                <li>pageX : <span class="pageX">0</span>px</li>
+                <li>pageY : <span class="pageY">0</span>px</li>
+                <li>screenX : <span class="screenX">0</span>px</li>
+                <li>screenY : <span class="screenY">0</span>px</li>
+            </ul>
+        </div>
+    </div>   
+<!-- //info -->
+
+
+<script src="../assets/js/highright.js"></script>
+<script src="../assets/js/custom.js"></script>
+<script>      
+    modal();
+    highlight();
+    tabMenu();
+
+    //출력용 
+        window.addEventListener("mousemove", (event) => {
+        document.querySelector(".clientX").innerText = event.clientX;
+        document.querySelector(".clientY").innerText = event.clientY;
+        document.querySelector(".offsetX").innerText = event.offsetX;
+        document.querySelector(".offsetY").innerText = event.offsetY;
+        document.querySelector(".pageX").innerText = event.pageX;
+        document.querySelector(".pageY").innerText = event.pageY;
+        document.querySelector(".screenX").innerText = event.screenX;
+        document.querySelector(".screenY").innerText = event.screenY;
+    })
+    //해당 클래스 위치에 마우스가 움직일 때마다 x,y좌표값 요소의 x,y값 페이지의 x,y값,
+    // 디바이스의 x,y값을 설정해준다.
+    
+    //마우스 움직이기
+        window.addEventListener("mousemove", (e) => {
+            // document.querySelector(".cursor").style.left = e.clientX -25 + "px"
+            // document.querySelector(".cursor").style.top = e.clientY -25 + "px"
+
+            let x =  e.clientX -25 + "px";
+            let y =  e.clientY -25 + "px";
+            document.querySelector(".cursor").style.cssText = "left:" + x + "; top:" + y
+        });
+    //윈도우에서 마우스가 움직일때 커서의 속성에 x, t값을 설정한다. 
+    //x는 윈도우에서 발생하는 이벤트의 x좌표에서 -25px한 위치, y도 마찬가지로 값을 계산한 y위치를 나타내어
+    //마우스가 움직일 때마다 커서도 움직이게하는 효과를 준다.
+
+ 
+    // const style = document.querySelectorAll(".mouse__wrap span")
+    
+    // for(let i=0; i<style.length; i++){
+    //     style[i].addEventListener("mouseover", () => {
+    //     document.querySelector(".cursor").classList.add(`style${i+1}`)
+    // })
+    //     style[i].addEventListener("mouseout", () => {
+    //     document.querySelector(".cursor").classList.remove(`style${i+1}`);
+    // })
+    // }
+
+        // document.querySelectorAll(".mouse__wrap span").forEach((span, index) => {
+        //     span.addEventListener("mouseover", () => {
+        //         document.querySelector(".cursor").classList.add("style"+(index + 1))
+        //     })
+        //     span.addEventListener("mouseout", () => {
+        //         document.querySelector(".cursor").classList.remove("style" + (index+1))
+        //     })
+        // }) 
+
+         //getAttribute
+         document.querySelectorAll(".mouse__wrap span").forEach(span => {
+            let attr = span.getAttribute("class");
+            span.addEventListener("mouseover", () => {
+                document.querySelector(".cursor").classList.add(attr);
+            });
+            span.addEventListener("mouseout", () => {
+                document.querySelector(".cursor").classList.remove(attr);
+            })
+        })
+        //mouse__wrpa안에 있는 모든 span태그에 대해 마우스가 오버될때 클래스 커서에 
+        //attr 클래스를 추가해주고 마우스가 벗어나면 제거해줘 효과를 줫다 뺏다 한다.
+
+  
+</script>
+</body>
+</html>

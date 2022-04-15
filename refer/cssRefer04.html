@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Refernce04</title>
+
+    <!-- 파비콘 -->
+    <link rel="shortcut icon" href="../assets/face/css.png">
+    <link rel="apple-touch-icon-precomposed" href="../assets/face/css.png">
+    <link rel="icon" href="../assets/face/css.png" sizes="128x128">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/prism.css">
+</head>
+<body>
+
+    <header id="header">
+        <h1><a href="index.html">라인 중학교 1학년 코딩반</a></h1>
+        <strong>한승보</strong>
+    </header>
+
+    <main id="contents">
+        <h2><a href="css.html">CSS <em>색상</em></a></h2>
+
+        <div class="menu">
+            <ul>
+                <li><a href="css.html">속성</a></li>
+                <li><a href="cssRefer01.html">기초 문법</a></li>
+                <li><a href="cssRefer02.html">Block/Inline</a></li>
+                <li><a href="cssRefer03.html">CSS 단위</a></li>
+                <li class="active"><a href="cssRefer04.html">CSS 색상</a></li>
+                <li><a href="cssRefer05.html">id/class 차이점</a></li>
+                <li><a href="cssRefer06.html">float</a></li>
+                <li><a href="cssRefer07.html">벤더 프리픽스</a></li>
+                <li><a href="cssRefer08.html">img</a></li>
+                <li><a href="cssRefer09.html">ir효과</a></li>
+            </ul>
+        </div>
+        <!-- //menu -->
+
+        <div class="doc">
+            <div class="refer">
+                <h3>CSS 색상</h3>
+                <p>CSS에서 색을 표현하는 방법에는 세 가지가 있습니다.</p>
+
+                <h4>색상 이름으로 표현</h4>
+                <p>색상 이름으로 표현이 가능하다. W3C에서 정의한 HTML4 표준 색상 이름은 다음과 같다.(총 약 140개가 있다)<br>(HTML에서 색상 이름은 대소문자를 구분하지 않는다.)</p>
+                <div class="table">
+                    <table>
+                        <tr>
+                            <td>auqa</td>
+                            <td>black</td>
+                            <td>blue</td>
+                            <td>fuchsia</td>
+                        </tr>
+                        <tr>
+                            <td>gray</td>
+                            <td>green</td>
+                            <td>lime</td>
+                            <td>maroon</td>
+                        </tr>
+                        <tr>
+                            <td>navy</td>
+                            <td>olive</td>
+                            <td>purple</td>
+                            <td>red</td>
+                        </tr>
+                        <tr>
+                            <td>silver</td>
+                            <td>teal</td>
+                            <td>white</td>
+                            <td>yellow</td>
+                        </tr>
+                        <tr>
+                            <td>darkorchild</td>
+                            <td>darkred</td>
+                            <td>darkkhaki</td>
+                            <td>darkgrey</td>
+                        </tr>
+                    </table>
+                </div>
+                <h4>RGB 색상 값으로 표현</h4>
+                <p>모니터나 스크린은 빨간색(Red), 녹색(Green), 파란색(Blue)을 혼합하여 색을 표현한다.
+                    따라서 HTML에서도 이 세 가지 색을 가지고 색을 표현하는 RGB 색상을 사용한다.                    
+                    <b>RGB 색상의 기본색(Red, Green, Blue)은 각각 0부터 255까지의 범위를 가진다.</b></p>
+                    <div class="code">
+                        &lt;style&gt;<br>
+                        .blue { color: rgb(0,0,255); }<br>
+                        .green { color: rgb(0,128,0); }<br>
+                        .silver { color: rgb(192,192,192); }<br>
+                        &lt;/style&gt;
+                    </div>
+                    
+                <h4>16진수 색상값으로 표현</h4>
+                <p>16진수 색상값은 RGB 색상값을 각각 16진수로 변환한 것이다. 따라서 RGB 색상의 기본색(Red, Green, Blue)은 각각 00부터 FF까지의 범위를 가진다.</p>
+
+                <div class="code">
+                    &lt;style&gt;<br>
+                    .blue { color: #0000FF; }<br>
+                    .green { color: #008000; }<br>
+                    .silver { color: #C0C0C0; }<br>
+                    &lt;/style&gt;
+                </div>
+
+                <h4>RGBA colors</h4>
+                <p>RGBA 는 RGB에 alpha라는 투명도가 추가된것이다. alpha는 0에서 1사이의 값으로 정의한다.</p>
+
+                <h4>HSL colors</h4>
+                <p>ccs3에서 새롭게 표준으로 소개된 색 표현 방식 HSL은 HUE, saturation 그리고 Lightness의 약자이다</p>
+                <div class="line">
+                    <ul>
+                        <li>Hue(빛깔, 색조)는 우리가 color로 이해하고 있는 것으로 색상 휠(색상환)로 표현 0에서 360사이의 값을 가진다.</li>
+                        <li>satuation(포화도) 주어진 색에 회색이 들어간 정도를 의미, 백분율 0%는 회색 음영을 의미하고 100%는 완전한 채도를 의미</li>
+                        <li>Lightness(빛) 주어진 색의 흰색의 포함정도를 의미, 0%는 검은색을 의미하고 100%는 흰색을 의미한다. 50%는 보통의 상태이다.</li>
+                    </ul>
+                </div>
+
+                <h4>HSLA colors</h4>
+                <p>css3에서 새로 소개된 HSLA는 a(alpha value)는 색의 투명도를 조절하는 값을 의미하며 0에서 1사이의 값으로 투명도를 표현</p>
+
+
+
+            </div>
+        </div>
+        <!-- //refer -->
+        
+       
+    </main>
+
+    <!-- script -->
+    <script src="assets/js/prism.js"></script>
+
+   
+    
+</body>
+</html>
