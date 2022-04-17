@@ -52,7 +52,11 @@ body {background:#f1f4fb url(../img/body_bg.gif)}
 /* Header  */
 
 #header{
+<<<<<<< HEAD
 	background: #934107 center 57px;
+=======
+	background:#a5d5fa center 57px;
+>>>>>>> e7537a667e0b282fda079f0c59c40d257ea9f12d
 	padding: 10px 0 10px 0px;
 }
 #header.sub {
@@ -128,13 +132,21 @@ pre.pre-show{
 .header_tit {margin-top:70px; }
 .header_tit h1 {display:inline-block; font-size: 45px; text-transform:uppercase; color:#fff;}
 .header_tit h2 {margin-top:4px;}
+<<<<<<< HEAD
 .header_tit h2 a {font-size:30px; font-family: 'Abel'; color:#fff;}
+=======
+.header_tit h2 a {font-size:30px; font-family: 'Abel'; color:#fff; b}
+>>>>>>> e7537a667e0b282fda079f0c59c40d257ea9f12d
 .header_icon {margin: 20px 0; }
 .header_icon ul {margin:20px 0;}
 
 .header_icon {text-align: center;}
 .header_icon li {display: inline; margin: 0 2px;}
+<<<<<<< HEAD
 .header_icon li a {position: relative; background-color: #ed8329; width: 60px; height: 60px; border-radius: 50%; display: inline-block; font-size: 28px; color: #fff; line-height: 60px; transition: box-shadow 0.3s ease;}
+=======
+.header_icon li a {position: relative; background-color: #77b5e6; width: 60px; height: 60px; border-radius: 50%; display: inline-block; font-size: 28px; color: #fff; line-height: 60px; transition: box-shadow 0.3s ease;}
+>>>>>>> e7537a667e0b282fda079f0c59c40d257ea9f12d
 .header_icon li a span {
     position: absolute; left: 50%; top: -40px; transform: translateX(-50%);
     font-size: 12px; line-height: 1.6; background: #77b5e6; padding: 3px 9px;
